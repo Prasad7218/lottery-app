@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Header from "@/components/header/Header";
 import GooglePayButton from "@google-pay/button-react";
+import { lotteryArray } from "@/components/dummyData/array";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,6 +10,50 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Header />
+      <div
+        className="card"
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-around",
+          flexWrap: "wrap",
+          padding: "20px",
+        }}
+      >
+        {lotteryArray.map((item: any) => {
+          return (
+            <>
+              <div
+                className="card"
+                style={{
+                  width: "18rem",
+                  marginTop: "15px",
+                }}
+              >
+                {/* <img src="..." className="card-img-top" alt="..." /> */}
+                <div className="card-body">
+                  <h5 className="card-title">{item.name}</h5>
+                  <p className="card-text">lottery amount:{item.amount}</p>
+                  <p className="card-text">Members:{item.members}</p>
+                  <p className="card-text">first Price:{item.firstprice}</p>
+
+                  <p className="card-text" style={{ color: "blue" }}>
+                    phone pe/Gpay:-{item.mobileno}
+                  </p>
+                  <p className="card-text" style={{ color: "coral" }}>
+                    Entry fee:{item.entryfee}
+                  </p>
+
+                  {/* <a href="#" className="btn btn-primary">
+                    Go somewhere
+                  </a> */}
+                </div>
+              </div>
+            </>
+          );
+        })}
+      </div>
+
       {/* <GooglePayButton
         environment="TEST"
         paymentRequest={{
