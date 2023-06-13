@@ -3,22 +3,169 @@ import { Inter } from "next/font/google";
 import Header from "@/components/header/Header";
 import GooglePayButton from "@google-pay/button-react";
 import { lotteryArray } from "@/components/dummyData/array";
-
-const inter = Inter({ subsets: ["latin"] });
+import laundry1 from "@/assets/images/laundry1.jpg";
+import laundry2 from "@/assets/images/laundry2.jpg";
+import laundry3 from "@/assets/images/laundry3.jpeg";
 
 export default function Home() {
+  const imageSource1 = laundry1.src;
+  const imageSource2 = laundry2.src;
+  const imageSource3 = laundry3.src;
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Header />
+      <div>
+        <div
+          id="carouselExampleCaptions"
+          style={{ height: "400px" }}
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              className="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img
+                src={imageSource1}
+                style={{ height: "400px" }}
+                className="d-block w-100"
+                alt="..."
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <img
+                src={imageSource2}
+                style={{ height: "400px" }}
+                className="d-block w-100"
+                alt="..."
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>
+                  Some representative placeholder content for the second slide.
+                </p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <img
+                src={imageSource3}
+                style={{ height: "400px" }}
+                className="d-block w-100"
+                alt="..."
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <button
+        type="button"
+        className="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Launch demo modal
+      </button>
+
+      <div
+        className="modal fade"
+        id="exampleModal"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalLabel">
+                Sign up
+              </h5>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">...</div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Sign Up As A Customer
+              </button>
+              <button type="button" className="btn btn-primary">
+                Sign Up As A Service Provider
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div
         className="card"
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-around",
-          flexWrap: "wrap",
-          padding: "20px",
-        }}
+        // style={{
+        //   display: "flex",
+        //   flexDirection: "row",
+        //   justifyContent: "space-around",
+        //   flexWrap: "wrap",
+        //   padding: "20px",
+        // }}
       >
         {lotteryArray.map((item: any) => {
           return (
@@ -108,7 +255,7 @@ export default function Home() {
         buttonColor="Black"
         buttonType="buy"
       ></GooglePayButton> */}
-      <GooglePayButton
+      {/* <GooglePayButton
         environment="TEST"
         paymentRequest={{
           apiVersion: 2,
@@ -157,7 +304,7 @@ export default function Home() {
         existingPaymentMethodRequired={false}
         buttonColor="black"
         buttonType="buy"
-      />
+      /> */}
     </main>
   );
 }
