@@ -1,16 +1,16 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import Header from "@/components/header/Header";
-import GooglePayButton from "@google-pay/button-react";
-import { lotteryArray } from "@/components/dummyData/array";
-import laundry1 from "@/assets/images/laundry1.jpg";
-import laundry2 from "@/assets/images/laundry2.jpg";
-import laundry3 from "@/assets/images/laundry3.jpeg";
+// import { lotteryArray } from "@/components/dummyData/array";
+// import cloth1 from "@/assets/images/cloth1.jpeg";
+// import cloth2 from "@/assets/images/cloth2.jpg";
+// import cloth3 from "@/assets/images/cloth3.jpg";
+import hanuman from "@/assets/images/hanuman.jpg";
+import mahadev from "@/assets/images/mahadev.jpg";
+import balaji from "@/assets/images/balaji.jpg";
 
 export default function Home() {
-  const imageSource1 = laundry1.src;
-  const imageSource2 = laundry2.src;
-  const imageSource3 = laundry3.src;
+  const imageSource1 = hanuman.src;
+  const imageSource2 = mahadev.src;
+  const imageSource3 = balaji.src;
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Header />
@@ -52,9 +52,11 @@ export default function Home() {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
+                <h5>Wash</h5>
                 <p>
-                  Some representative placeholder content for the first slide.
+                  We use state-of-the-art front loading washing machines and
+                  premium detergents for wash fold and laundry services to give
+                  your clothes that special care it needs.
                 </p>
               </div>
             </div>
@@ -66,9 +68,10 @@ export default function Home() {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
+                <h5>Dry Clean</h5>
                 <p>
-                  Some representative placeholder content for the second slide.
+                  We use various best available technology and machines to
+                  increase the longevity of your favourite garments
                 </p>
               </div>
             </div>
@@ -80,9 +83,11 @@ export default function Home() {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
+                <h5>Steam Press</h5>
                 <p>
-                  Some representative placeholder content for the third slide.
+                  We use top quality press to give you wrinkle free ironing to
+                  give a finish to your valued garment that cannot be achieved
+                  at home
                 </p>
               </div>
             </div>
@@ -141,7 +146,6 @@ export default function Home() {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body">...</div>
             <div className="modal-footer">
               <button
                 type="button"
@@ -159,152 +163,34 @@ export default function Home() {
       </div>
       <div
         className="card"
-        // style={{
-        //   display: "flex",
-        //   flexDirection: "row",
-        //   justifyContent: "space-around",
-        //   flexWrap: "wrap",
-        //   padding: "20px",
-        // }}
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-around",
+          flexWrap: "wrap",
+          padding: "20px",
+        }}
       >
-        {lotteryArray.map((item: any) => {
+        {/* {lotteryArray.map((item: any) => {
           return (
             <>
-              <div
-                className="card"
-                style={{
-                  width: "18rem",
-                  marginTop: "15px",
-                }}
-              >
-                {/* <img src="..." className="card-img-top" alt="..." /> */}
+              <div className="card" style={{ width: "18rem" }}>
+                <img src="..." className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h5 className="card-title">{item.name}</h5>
-                  <p className="card-text">lottery amount:{item.amount}</p>
-                  <p className="card-text">Members:{item.members}</p>
-                  <p className="card-text">first Price:{item.firstprice}</p>
-
-                  <p className="card-text" style={{ color: "blue" }}>
-                    phone pe/Gpay:-{item.mobileno}
+                  <h5 className="card-title">Card title</h5>
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
                   </p>
-                  <p className="card-text" style={{ color: "coral" }}>
-                    Entry fee:{item.entryfee}
-                  </p>
-
-                  {/* <a href="#" className="btn btn-primary">
+                  <a href="#" className="btn btn-primary">
                     Go somewhere
-                  </a> */}
+                  </a>
                 </div>
               </div>
             </>
           );
-        })}
+        })} */}
       </div>
-
-      {/* <GooglePayButton
-        environment="TEST"
-        paymentRequest={{
-          apiVersion: 2,
-          apiVersionMinor: 0,
-          allowedPaymentMethods: [
-            {
-              type: "CARD",
-              parameters: {
-                allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
-                allowedCardNetworks: [
-                  "AMEX",
-                  "DISCOVER",
-                  "JCB",
-                  "MASTERCARD",
-                  "VISA",
-                ],
-              },
-              tokenizationSpecification: {
-                type: "PAYMENT_GATEWAY",
-                parameters: {
-                  gateway: "example",
-                  gatewayMerchantId: "exampleGetMerchantId",
-                },
-              },
-            },
-          ],
-          merchantInfo: {
-            merchantId: "123456796533",
-            merchantName: "Example Merchant",
-          },
-          transactionInfo: {
-            totalPriceStatus: "FINAL",
-            totalpriceLabel: "Total",
-
-            totalPrice: "10",
-
-            currencyCode: "USD",
-            countryCode: "US",
-          },
-          shippingAddressRequired: true,
-          callbackIntents: ["PAYMENT_AUTHORIZATION"],
-        }}
-        onLoadPaymentData={(PaymentRequest) => {
-          console.log(PaymentRequest);
-        }}
-        onPaymentAuthorized={(paymentData: any) => {
-          console.log(paymentData);
-          return { transactionState: "SUCCESS" };
-        }}
-        // existingPaymentMethodRequired='false'
-        buttonColor="Black"
-        buttonType="buy"
-      ></GooglePayButton> */}
-      {/* <GooglePayButton
-        environment="TEST"
-        paymentRequest={{
-          apiVersion: 2,
-          apiVersionMinor: 0,
-          allowedPaymentMethods: [
-            {
-              type: "CARD",
-              parameters: {
-                allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
-                allowedCardNetworks: ["MASTERCARD", "VISA"],
-              },
-              tokenizationSpecification: {
-                type: "PAYMENT_GATEWAY",
-                parameters: {
-                  gateway: "example",
-                  gatewayMerchantId: "exampleGatewayMerchantId",
-                },
-              },
-            },
-          ],
-          merchantInfo: {
-            merchantId: "12345678901234567890",
-            merchantName: "Demo Merchant",
-          },
-          transactionInfo: {
-            totalPriceStatus: "FINAL",
-            totalPriceLabel: "Total",
-            totalPrice: "1",
-            currencyCode: "USD",
-            countryCode: "US",
-          },
-          shippingAddressRequired: true,
-          callbackIntents: ["SHIPPING_ADDRESS", "PAYMENT_AUTHORIZATION"],
-        }}
-        onLoadPaymentData={(paymentRequest) => {
-          console.log("Success", paymentRequest);
-        }}
-        onPaymentAuthorized={(paymentData) => {
-          console.log("Payment Authorised Success", paymentData);
-          return { transactionState: "SUCCESS" };
-        }}
-        onPaymentDataChanged={(paymentData) => {
-          console.log("On Payment Data Changed", paymentData);
-          return {};
-        }}
-        existingPaymentMethodRequired={false}
-        buttonColor="black"
-        buttonType="buy"
-      /> */}
     </main>
   );
 }

@@ -14,7 +14,6 @@ export const lotteryArray = [
     amount: 500,
     members: 10,
     firstprice: 450,
-
     mobileno: "7218703020",
     entryfee: 50,
   },
@@ -24,7 +23,6 @@ export const lotteryArray = [
     amount: 1500,
     members: 10,
     firstprice: 1300,
-
     mobileno: "7218703020",
     entryfee: 150,
   },
@@ -34,7 +32,6 @@ export const lotteryArray = [
     amount: 2000,
     members: 10,
     firstprice: 1700,
-
     mobileno: "7218703020",
     entryfee: 200,
   },
@@ -44,7 +41,6 @@ export const lotteryArray = [
     amount: 5000,
     members: 10,
     firstprice: 4500,
-
     mobileno: "7218703020",
     entryfee: 500,
   },
