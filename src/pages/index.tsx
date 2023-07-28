@@ -1,8 +1,4 @@
 import Header from "@/components/header/Header";
-// import { lotteryArray } from "@/components/dummyData/array";
-// import cloth1 from "@/assets/images/cloth1.jpeg";
-// import cloth2 from "@/assets/images/cloth2.jpg";
-// import cloth3 from "@/assets/images/cloth3.jpg";
 import hanuman from "@/assets/images/hanuman.jpg";
 import mahadev from "@/assets/images/mahadev.jpg";
 import balaji from "@/assets/images/balaji.jpg";
@@ -51,14 +47,6 @@ export default function Home() {
                 className="d-block w-100"
                 alt="..."
               />
-              <div className="carousel-caption d-none d-md-block">
-                <h5>Wash</h5>
-                <p>
-                  We use state-of-the-art front loading washing machines and
-                  premium detergents for wash fold and laundry services to give
-                  your clothes that special care it needs.
-                </p>
-              </div>
             </div>
             <div className="carousel-item">
               <img
@@ -67,13 +55,6 @@ export default function Home() {
                 className="d-block w-100"
                 alt="..."
               />
-              <div className="carousel-caption d-none d-md-block">
-                <h5>Dry Clean</h5>
-                <p>
-                  We use various best available technology and machines to
-                  increase the longevity of your favourite garments
-                </p>
-              </div>
             </div>
             <div className="carousel-item">
               <img
@@ -82,14 +63,6 @@ export default function Home() {
                 className="d-block w-100"
                 alt="..."
               />
-              <div className="carousel-caption d-none d-md-block">
-                <h5>Steam Press</h5>
-                <p>
-                  We use top quality press to give you wrinkle free ironing to
-                  give a finish to your valued garment that cannot be achieved
-                  at home
-                </p>
-              </div>
             </div>
           </div>
           <button
@@ -118,49 +91,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <button
-        type="button"
-        className="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Launch demo modal
-      </button>
 
-      <div
-        className="modal fade"
-        id="exampleModal"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">
-                Sign up
-              </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Sign Up As A Customer
-              </button>
-              <button type="button" className="btn btn-primary">
-                Sign Up As A Service Provider
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
       <div
         className="card"
         style={{
@@ -171,25 +102,21 @@ export default function Home() {
           padding: "20px",
         }}
       >
-        {/* {lotteryArray.map((item: any) => {
-          return (
-            <>
-              <div className="card" style={{ width: "18rem" }}>
-                <img src="..." className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" className="btn btn-primary">
-                    Go somewhere
-                  </a>
-                </div>
+        <div className="container-fluid">
+          <div className="card" style={{ width: "18rem" }}>
+            <img src={imageSource1} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title">Hanuman Chalisa</h5>
+              <div>
+                <audio
+                  src="/assets/audio/hanumanchalisa.mp3"
+                  preload="none"
+                  controls
+                ></audio>
               </div>
-            </>
-          );
-        })} */}
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
