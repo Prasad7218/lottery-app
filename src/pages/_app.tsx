@@ -19,6 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossOrigin="anonymous"
       />
+      <Script src="https://mozilla.github.io/pdf.js/build/pdf.js" />
       <Script src="https://unpkg.com/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" />
 
       <Script src="https://static.phonepe.com/phonepe-sdk/checkout.js" />

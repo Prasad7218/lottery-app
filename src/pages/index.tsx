@@ -8,6 +8,7 @@ export default function Home() {
   const imageSource1 = hanuman.src;
   const imageSource2 = mahadev.src;
   const imageSource3 = balaji.src;
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Header />
@@ -115,14 +116,17 @@ export default function Home() {
               <h5 className="card-title">Hanuman Chalisa</h5>
 
               <iframe
-                // style={{
-                //   width: "100%",
-                //   height: "400px",
-                //   border: "1px solid #ccc",
-                // }}
                 title="Hanuman Chalisa PDF"
                 src="/assets/pdf/hanumanChalisa.pdf"
               ></iframe>
+              <object
+                data="/assets/pdf/hanumanChalisa.pdf"
+                type="application/pdf"
+              ></object>
+              <embed
+                src="/assets/pdf/hanumanChalisa.pdf"
+                type="application/pdf"
+              />
 
               <div>
                 <audio
