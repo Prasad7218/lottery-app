@@ -12,6 +12,7 @@
     "@google-pay/button-react": "^3.0.6",
     "@mikro-orm/core": "^5.7.12",
     "@mikro-orm/postgresql": "^5.7.12",
+    "@react-pdf/renderer": "^3.1.12",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",

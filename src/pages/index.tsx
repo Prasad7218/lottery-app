@@ -2,6 +2,7 @@ import Header from "@/components/header/Header";
 import hanuman from "@/assets/images/hanuman.jpg";
 import mahadev from "@/assets/images/mahadev.jpg";
 import balaji from "@/assets/images/balaji.jpg";
+import { Document, Page } from "@react-pdf/renderer";
 
 export default function Home() {
   const imageSource1 = hanuman.src;
@@ -104,9 +105,25 @@ export default function Home() {
       >
         <div className="container-fluid">
           <div className="card" style={{ width: "18rem" }}>
-            <img src={imageSource1} className="card-img-top" alt="..." />
+            <img
+              src={imageSource1}
+              style={{ height: "300px", width: "100%" }}
+              className="card-img-top"
+              alt="..."
+            />
             <div className="card-body">
               <h5 className="card-title">Hanuman Chalisa</h5>
+
+              <iframe
+                // style={{
+                //   width: "100%",
+                //   height: "400px",
+                //   border: "1px solid #ccc",
+                // }}
+                title="Hanuman Chalisa PDF"
+                src="/assets/pdf/hanumanChalisa.pdf"
+              ></iframe>
+
               <div>
                 <audio
                   src="/assets/audio/hanumanchalisa.mp3"
