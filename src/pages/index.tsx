@@ -2,12 +2,30 @@ import Header from "@/components/header/Header";
 import hanuman from "@/assets/images/hanuman.jpg";
 import mahadev from "@/assets/images/mahadev.jpg";
 import balaji from "@/assets/images/balaji.jpg";
-import { Document, Page } from "@react-pdf/renderer";
+// import { Document, Page, pdfjs } from "@react-pdf/renderer";
 
 export default function Home() {
   const imageSource1 = hanuman.src;
   const imageSource2 = mahadev.src;
   const imageSource3 = balaji.src;
+  const pdfPath = "path/to/your-downloaded-file.pdf";
+
+  // Fetch the PDF file
+  // fetch(pdfPath)
+  //   .then((response) => response.arrayBuffer())
+  //   .then((data) => {
+  //     // Render the PDF using PDF.js
+  //     pdfjsLib.getDocument({ data }).promise.then(function (pdf) {
+  //       pdf.getPage(1).then(function (page) {
+  //         const canvas = document.getElementById("pdfCanvas");
+  //         const context = canvas.getContext("2d");
+  //         const viewport = page.getViewport({ scale: 1.5 });
+  //         canvas.width = viewport.width;
+  //         canvas.height = viewport.height;
+  //         page.render({ canvasContext: context, viewport: viewport });
+  //       });
+  //     });
+  //   });
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -114,20 +132,18 @@ export default function Home() {
             />
             <div className="card-body">
               <h5 className="card-title">Hanuman Chalisa</h5>
-
-              <iframe
+              {/* <iframe
                 title="Hanuman Chalisa PDF"
                 src="/assets/pdf/hanumanChalisa.pdf"
+              ></iframe> */}
+              <iframe
+                title="Hanuman Chalisa PDF"
+                src={`https://docs.google.com/viewer?url=${encodeURIComponent(
+                  "https://www.hindutemplealbany.org/wp-content/uploads/2016/08/Sri_Hanuman_Chalisa_Hindi.pdf"
+                )}&embedded=true`}
+                width="300"
+                height="300"
               ></iframe>
-              <object
-                data="/assets/pdf/hanumanChalisa.pdf"
-                type="application/pdf"
-              ></object>
-              <embed
-                src="/assets/pdf/hanumanChalisa.pdf"
-                type="application/pdf"
-              />
-
               <div>
                 <audio
                   src="/assets/audio/hanumanchalisa.mp3"
@@ -136,6 +152,7 @@ export default function Home() {
                 ></audio>
               </div>
             </div>
+            <canvas id="pdfCanvas"></canvas>
           </div>
         </div>
       </div>
