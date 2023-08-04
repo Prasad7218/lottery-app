@@ -21,6 +21,13 @@ export default function Home() {
     "/assets/images/ganpatia1/g1.png",
     "/assets/images/ganpatia1/g2.png",
   ];
+  const shanidev_aarti = [
+    "/assets/images/shanidev_aarti/s1.png",
+    "/assets/images/shanidev_aarti/s2.png",
+    "/assets/images/shanidev_aarti/s3.png",
+    "/assets/images/shanidev_aarti/s4.png",
+    "/assets/images/shanidev_aarti/s5.png",
+  ];
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -123,10 +130,10 @@ export default function Home() {
           imgSrc="/assets/images/ganpati.jpg"
         />
         <Card
-          imgArrayFromUser={hanumanArray}
+          imgArrayFromUser={shanidev_aarti}
           imgAudio="/assets/audio/hanumanchalisa.mp3"
-          imgTitle="Hanuman Chalisa"
-          imgSrc="/assets/images/hanuman.jpg"
+          imgTitle="Shanidev aarti"
+          imgSrc="/assets/images/shanidev.jpg"
         />
         <Card
           imgArrayFromUser={hanumanArray}
