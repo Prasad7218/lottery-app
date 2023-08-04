@@ -131,12 +131,47 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <Card
-        imgArrayFromUser={hanumanArray}
-        imgAudio="/assets/audio/hanumanchalisa.mp3"
-        imgTitle="Hanuman Chalisa"
-        imgSrc="/assets/images/hanuman.jpg"
-      />
+      <div
+        className="container-fluid"
+        style={{ display: "flex", flexWrap: "wrap" }}
+      >
+        <Card
+          imgArrayFromUser={hanumanArray}
+          imgAudio="/assets/audio/hanumanchalisa.mp3"
+          imgTitle="Hanuman Chalisa"
+          imgSrc="/assets/images/hanuman.jpg"
+        />
+        <Card
+          imgArrayFromUser={hanumanArray}
+          imgAudio="/assets/audio/hanumanchalisa.mp3"
+          imgTitle="Hanuman Chalisa"
+          imgSrc="/assets/images/hanuman.jpg"
+        />
+        <Card
+          imgArrayFromUser={hanumanArray}
+          imgAudio="/assets/audio/hanumanchalisa.mp3"
+          imgTitle="Hanuman Chalisa"
+          imgSrc="/assets/images/hanuman.jpg"
+        />
+        <Card
+          imgArrayFromUser={hanumanArray}
+          imgAudio="/assets/audio/hanumanchalisa.mp3"
+          imgTitle="Hanuman Chalisa"
+          imgSrc="/assets/images/hanuman.jpg"
+        />
+        <Card
+          imgArrayFromUser={hanumanArray}
+          imgAudio="/assets/audio/hanumanchalisa.mp3"
+          imgTitle="Hanuman Chalisa"
+          imgSrc="/assets/images/hanuman.jpg"
+        />
+        <Card
+          imgArrayFromUser={hanumanArray}
+          imgAudio="/assets/audio/hanumanchalisa.mp3"
+          imgTitle="Hanuman Chalisa"
+          imgSrc="/assets/images/hanuman.jpg"
+        />
+      </div>
     </main>
   );
 }
