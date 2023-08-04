@@ -2,6 +2,8 @@ import Header from "@/components/header/Header";
 import hanuman from "@/assets/images/hanuman.jpg";
 import mahadev from "@/assets/images/mahadev.jpg";
 import balaji from "@/assets/images/balaji.jpg";
+import Makepdf from "@/components/common/Makepdf";
+import Card from "@/components/card/Card";
 // import hanuman1 from "@/public/ass";
 // import hanuman2 from "@/public/assets/images/hanuman2.png";
 
@@ -36,6 +38,14 @@ export default function Home() {
   //       });
   //     });
   //   });
+  const hanumanArray = [
+    "/assets/images/h1.png",
+    "/assets/images/h2.png",
+    "/assets/images/h3.png",
+    "/assets/images/h4.png",
+    "/assets/images/h5.png",
+    "/assets/images/h6.png",
+  ];
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -121,104 +131,12 @@ export default function Home() {
           </button>
         </div>
       </div>
-
-      <div
-        className="card"
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-around",
-          flexWrap: "wrap",
-          padding: "20px",
-        }}
-      >
-        <div className="container-fluid">
-          <div className="card" style={{ width: "18rem" }}>
-            <img
-              src={imageSource1}
-              style={{ height: "210px", width: "100%" }}
-              className="card-img-top"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">Hanuman Chalisa</h5>
-              <div
-                style={{
-                  width: "270px",
-                  height: "400px",
-                  overflow: "auto",
-                  border: "1px solid #ccc",
-                  padding: "10px",
-                }}
-                className="box"
-              >
-                <img
-                  style={{
-                    display: "block",
-                    maxWidth: "100%",
-                    marginBottom: "10px",
-                  }}
-                  src="/assets/images/h1.png"
-                  alt="Image 1"
-                />
-                <img
-                  style={{
-                    display: "block",
-                    maxWidth: "100%",
-                    marginBottom: "10px",
-                  }}
-                  src="/assets/images/h2.png"
-                  alt="Image 2"
-                />
-                <img
-                  style={{
-                    display: "block",
-                    maxWidth: "100%",
-                    marginBottom: "10px",
-                  }}
-                  src="/assets/images/h3.png"
-                  alt="Image 3"
-                />
-                <img
-                  style={{
-                    display: "block",
-                    maxWidth: "100%",
-                    marginBottom: "10px",
-                  }}
-                  src="/assets/images/h4.png"
-                  alt="Image 3"
-                />
-                <img
-                  style={{
-                    display: "block",
-                    maxWidth: "100%",
-                    marginBottom: "10px",
-                  }}
-                  src="/assets/images/h5.png"
-                  alt="Image 3"
-                />
-                <img
-                  style={{
-                    display: "block",
-                    maxWidth: "100%",
-                    marginBottom: "10px",
-                  }}
-                  src="/assets/images/h6.png"
-                  alt="Image 3"
-                />
-              </div>
-              <div>
-                <audio
-                  src="/assets/audio/hanumanchalisa.mp3"
-                  preload="none"
-                  style={{ width: "100%", maxWidth: "300px", margin: "10px 0" }}
-                  controls
-                ></audio>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Card
+        imgArrayFromUser={hanumanArray}
+        imgAudio="/assets/audio/hanumanchalisa.mp3"
+        imgTitle="Hanuman Chalisa"
+        imgSrc="/assets/images/hanuman.jpg"
+      />
     </main>
   );
 }
