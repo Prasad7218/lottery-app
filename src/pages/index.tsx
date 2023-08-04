@@ -10,12 +10,14 @@ export default function Home() {
   const imageSource3 = balaji.src;
 
   const hanumanArray = [
-    "/assets/images/h1.png",
-    "/assets/images/h2.png",
-    "/assets/images/h3.png",
-    "/assets/images/h4.png",
-    "/assets/images/h5.png",
-    "/assets/images/h6.png",
+    "/assets/images/hanuman_chalisa/h1.png",
+    "/assets/images/hanuman_chalisa/h2.png",
+    "/assets/images/hanuman_chalisa/h3.png",
+    "/assets/images/hanuman_chalisa/h4.png",
+    "/assets/images/hanuman_chalisa/h5.png",
+    "/assets/images/hanuman_chalisa/h6.png",
+    "/assets/images/hanuman_chalisa/h7.png",
+    "/assets/images/hanuman_chalisa/h8.png",
   ];
   const ganpati_sukhkarta_aarti = [
     "/assets/images/ganpatia1/g1.png",
@@ -27,6 +29,43 @@ export default function Home() {
     "/assets/images/shanidev_aarti/s3.png",
     "/assets/images/shanidev_aarti/s4.png",
     "/assets/images/shanidev_aarti/s5.png",
+  ];
+  const vishnu_sahas = [
+    "/assets/images/vishnu_sahastranaam/v1.png",
+    "/assets/images/vishnu_sahastranaam/v2.png",
+    "/assets/images/vishnu_sahastranaam/v3.png",
+    "/assets/images/vishnu_sahastranaam/v4.png",
+    "/assets/images/vishnu_sahastranaam/v5.png",
+    "/assets/images/vishnu_sahastranaam/v6.png",
+    "/assets/images/vishnu_sahastranaam/v7.png",
+    "/assets/images/vishnu_sahastranaam/v8.png",
+    "/assets/images/vishnu_sahastranaam/v9.png",
+    "/assets/images/vishnu_sahastranaam/v10.png",
+    "/assets/images/vishnu_sahastranaam/v11.png",
+    "/assets/images/vishnu_sahastranaam/v12.png",
+    "/assets/images/vishnu_sahastranaam/v13.png",
+    "/assets/images/vishnu_sahastranaam/v14.png",
+    "/assets/images/vishnu_sahastranaam/v15.png",
+    "/assets/images/vishnu_sahastranaam/v16.png",
+    "/assets/images/vishnu_sahastranaam/v17.png",
+    "/assets/images/vishnu_sahastranaam/v18.png",
+    "/assets/images/vishnu_sahastranaam/v19.png",
+    "/assets/images/vishnu_sahastranaam/v20.png",
+    "/assets/images/vishnu_sahastranaam/v21.png",
+    "/assets/images/vishnu_sahastranaam/v22.png",
+    "/assets/images/vishnu_sahastranaam/v23.png",
+    "/assets/images/vishnu_sahastranaam/v24.png",
+    "/assets/images/vishnu_sahastranaam/v25.png",
+    "/assets/images/vishnu_sahastranaam/v26.png",
+    "/assets/images/vishnu_sahastranaam/v27.png",
+    "/assets/images/vishnu_sahastranaam/v28.png",
+    "/assets/images/vishnu_sahastranaam/v29.png",
+    "/assets/images/vishnu_sahastranaam/v30.png",
+    "/assets/images/vishnu_sahastranaam/v31.png",
+    "/assets/images/vishnu_sahastranaam/v32.png",
+    "/assets/images/vishnu_sahastranaam/v33.png",
+    "/assets/images/vishnu_sahastranaam/v34.png",
+    "/assets/images/vishnu_sahastranaam/v35.png",
   ];
 
   return (
@@ -136,10 +175,10 @@ export default function Home() {
           imgSrc="/assets/images/shanidev.jpg"
         />
         <Card
-          imgArrayFromUser={hanumanArray}
-          imgAudio="/assets/audio/hanumanchalisa.mp3"
-          imgTitle="Hanuman Chalisa"
-          imgSrc="/assets/images/hanuman.jpg"
+          imgArrayFromUser={vishnu_sahas}
+          imgAudio="/assets/audio/vishnu_sahas.mp3"
+          imgTitle="Vishnu sahsranaam"
+          imgSrc="/assets/images/vishnu.jpg"
         />
         <Card
           imgArrayFromUser={hanumanArray}
