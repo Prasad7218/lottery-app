@@ -2,12 +2,22 @@ import Header from "@/components/header/Header";
 import hanuman from "@/assets/images/hanuman.jpg";
 import mahadev from "@/assets/images/mahadev.jpg";
 import balaji from "@/assets/images/balaji.jpg";
+// import hanuman1 from "@/public/ass";
+// import hanuman2 from "@/public/assets/images/hanuman2.png";
+
+// import hanuman3 from "@/public/assets/images/hanuman3.png";
+
 // import { Document, Page, pdfjs } from "@react-pdf/renderer";
 
 export default function Home() {
   const imageSource1 = hanuman.src;
   const imageSource2 = mahadev.src;
   const imageSource3 = balaji.src;
+  // const imageSource11 = hanuman1.src;
+  // const imageSource12 = hanuman2.src;
+
+  // const imageSource13 = hanuman3.src;
+
   const pdfPath = "path/to/your-downloaded-file.pdf";
 
   // Fetch the PDF file
@@ -132,18 +142,48 @@ export default function Home() {
             />
             <div className="card-body">
               <h5 className="card-title">Hanuman Chalisa</h5>
-              {/* <iframe
-                title="Hanuman Chalisa PDF"
-                src="/assets/pdf/hanumanChalisa.pdf"
-              ></iframe> */}
               <iframe
                 title="Hanuman Chalisa PDF"
-                src={`https://docs.google.com/viewer?url=${encodeURIComponent(
-                  "https://www.hindutemplealbany.org/wp-content/uploads/2016/08/Sri_Hanuman_Chalisa_Hindi.pdf"
-                )}&embedded=true`}
-                width="300"
-                height="300"
+                src="/assets/pdf/hanumanChalisa.pdf"
               ></iframe>
+              <div
+                style={{
+                  width: "400px",
+                  height: "500px",
+                  overflow: "auto",
+                  border: "1px solid #ccc",
+                  padding: "10px",
+                }}
+                className="box"
+              >
+                <img
+                  style={{
+                    display: "block",
+                    maxWidth: "100%",
+                    marginBottom: "10px",
+                  }}
+                  src="/assets/images/hanuman1.png"
+                  alt="Image 1"
+                />
+                <img
+                  style={{
+                    display: "block",
+                    maxWidth: "100%",
+                    marginBottom: "10px",
+                  }}
+                  src="/assets/images/hanuman2.png"
+                  alt="Image 2"
+                />
+                <img
+                  style={{
+                    display: "block",
+                    maxWidth: "100%",
+                    marginBottom: "10px",
+                  }}
+                  src="/assets/images/hanuman3.png"
+                  alt="Image 3"
+                />
+              </div>
               <div>
                 <audio
                   src="/assets/audio/hanumanchalisa.mp3"
