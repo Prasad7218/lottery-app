@@ -2,42 +2,13 @@ import Header from "@/components/header/Header";
 import hanuman from "@/assets/images/hanuman.jpg";
 import mahadev from "@/assets/images/mahadev.jpg";
 import balaji from "@/assets/images/balaji.jpg";
-import Makepdf from "@/components/common/Makepdf";
 import Card from "@/components/card/Card";
-// import hanuman1 from "@/public/ass";
-// import hanuman2 from "@/public/assets/images/hanuman2.png";
-
-// import hanuman3 from "@/public/assets/images/hanuman3.png";
-
-// import { Document, Page, pdfjs } from "@react-pdf/renderer";
 
 export default function Home() {
   const imageSource1 = hanuman.src;
   const imageSource2 = mahadev.src;
   const imageSource3 = balaji.src;
-  // const imageSource11 = hanuman1.src;
-  // const imageSource12 = hanuman2.src;
 
-  // const imageSource13 = hanuman3.src;
-
-  const pdfPath = "path/to/your-downloaded-file.pdf";
-
-  // Fetch the PDF file
-  // fetch(pdfPath)
-  //   .then((response) => response.arrayBuffer())
-  //   .then((data) => {
-  //     // Render the PDF using PDF.js
-  //     pdfjsLib.getDocument({ data }).promise.then(function (pdf) {
-  //       pdf.getPage(1).then(function (page) {
-  //         const canvas = document.getElementById("pdfCanvas");
-  //         const context = canvas.getContext("2d");
-  //         const viewport = page.getViewport({ scale: 1.5 });
-  //         canvas.width = viewport.width;
-  //         canvas.height = viewport.height;
-  //         page.render({ canvasContext: context, viewport: viewport });
-  //       });
-  //     });
-  //   });
   const hanumanArray = [
     "/assets/images/h1.png",
     "/assets/images/h2.png",
@@ -45,6 +16,10 @@ export default function Home() {
     "/assets/images/h4.png",
     "/assets/images/h5.png",
     "/assets/images/h6.png",
+  ];
+  const ganpati_sukhkarta_aarti = [
+    "/assets/images/ganpatia1/g1.png",
+    "/assets/images/ganpatia1/g2.png",
   ];
 
   return (
@@ -142,10 +117,10 @@ export default function Home() {
           imgSrc="/assets/images/hanuman.jpg"
         />
         <Card
-          imgArrayFromUser={hanumanArray}
-          imgAudio="/assets/audio/hanumanchalisa.mp3"
-          imgTitle="Hanuman Chalisa"
-          imgSrc="/assets/images/hanuman.jpg"
+          imgArrayFromUser={ganpati_sukhkarta_aarti}
+          imgAudio="/assets/audio/ganpati_sukh_karta_aarti.mp3"
+          imgTitle="Ganpati Sukh karta aarti"
+          imgSrc="/assets/images/ganpati.jpg"
         />
         <Card
           imgArrayFromUser={hanumanArray}

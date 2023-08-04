@@ -23,6 +23,7 @@ const Card: React.FC<CardProps> = ({
           justifyContent: "space-around",
           flexWrap: "wrap",
           padding: "20px",
+          margin: "15px",
         }}
       >
         <div className="container-fluid">
