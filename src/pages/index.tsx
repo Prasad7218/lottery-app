@@ -136,20 +136,16 @@ export default function Home() {
           <div className="card" style={{ width: "18rem" }}>
             <img
               src={imageSource1}
-              style={{ height: "300px", width: "100%" }}
+              style={{ height: "210px", width: "100%" }}
               className="card-img-top"
               alt="..."
             />
             <div className="card-body">
               <h5 className="card-title">Hanuman Chalisa</h5>
-              <iframe
-                title="Hanuman Chalisa PDF"
-                src="/assets/pdf/hanumanChalisa.pdf"
-              ></iframe>
               <div
                 style={{
-                  width: "400px",
-                  height: "500px",
+                  width: "270px",
+                  height: "400px",
                   overflow: "auto",
                   border: "1px solid #ccc",
                   padding: "10px",
@@ -162,7 +158,7 @@ export default function Home() {
                     maxWidth: "100%",
                     marginBottom: "10px",
                   }}
-                  src="/assets/images/hanuman1.png"
+                  src="/assets/images/h1.png"
                   alt="Image 1"
                 />
                 <img
@@ -171,7 +167,7 @@ export default function Home() {
                     maxWidth: "100%",
                     marginBottom: "10px",
                   }}
-                  src="/assets/images/hanuman2.png"
+                  src="/assets/images/h2.png"
                   alt="Image 2"
                 />
                 <img
@@ -180,7 +176,34 @@ export default function Home() {
                     maxWidth: "100%",
                     marginBottom: "10px",
                   }}
-                  src="/assets/images/hanuman3.png"
+                  src="/assets/images/h3.png"
+                  alt="Image 3"
+                />
+                <img
+                  style={{
+                    display: "block",
+                    maxWidth: "100%",
+                    marginBottom: "10px",
+                  }}
+                  src="/assets/images/h4.png"
+                  alt="Image 3"
+                />
+                <img
+                  style={{
+                    display: "block",
+                    maxWidth: "100%",
+                    marginBottom: "10px",
+                  }}
+                  src="/assets/images/h5.png"
+                  alt="Image 3"
+                />
+                <img
+                  style={{
+                    display: "block",
+                    maxWidth: "100%",
+                    marginBottom: "10px",
+                  }}
+                  src="/assets/images/h6.png"
                   alt="Image 3"
                 />
               </div>
@@ -188,11 +211,11 @@ export default function Home() {
                 <audio
                   src="/assets/audio/hanumanchalisa.mp3"
                   preload="none"
+                  style={{ width: "100%", maxWidth: "300px", margin: "10px 0" }}
                   controls
                 ></audio>
               </div>
             </div>
-            <canvas id="pdfCanvas"></canvas>
           </div>
         </div>
       </div>
