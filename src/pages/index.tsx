@@ -3,6 +3,7 @@ import hanuman from "@/assets/images/hanuman.jpg";
 import mahadev from "@/assets/images/mahadev.jpg";
 import balaji from "@/assets/images/balaji.jpg";
 import Card from "@/components/card/Card";
+import Carousel from "@/components/carousel/Carousel";
 
 export default function Home() {
   const imageSource1 = hanuman.src;
@@ -71,7 +72,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Header />
-      <div>
+      {/* <div>
         <div
           id="carouselExampleCaptions"
           style={{ height: "400px" }}
@@ -151,7 +152,8 @@ export default function Home() {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
+      </div> */}
+      <Carousel />
       <div
         className="container-fluid"
         style={{ display: "flex", flexWrap: "wrap" }}
